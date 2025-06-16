@@ -1,6 +1,6 @@
 # AirBnB Clone Project
 
-## 🏠 Overview
+## Overview
 
 This project is a **clone of the AirBnB web application**, developed as part of the **ALX Software Engineering program**. The objective is to build a **full-stack web application** from scratch, simulating key features of the real AirBnB platform.
 
@@ -8,7 +8,7 @@ It follows a modular, scalable architecture and progresses in stages—from cons
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Build a powerful and flexible **Command-Line Interface (CLI)** for object manipulation.
 - Implement **Object-Oriented Programming** (OOP) using Python.
@@ -19,7 +19,7 @@ It follows a modular, scalable architecture and progresses in stages—from cons
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Component        | Technology                        |
 |------------------|------------------------------------|
