@@ -1,10 +1,10 @@
-# 🏠 Airbnb Clone Project
+# Airbnb Clone Project
 
 Welcome to the **Airbnb Clone Project**, a full-stack web development project inspired by the popular Airbnb platform. This project is developed as part of the ALX Software Engineering Program to reinforce essential skills in backend development, web frameworks, database management, security, and collaboration.
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Build a functional Airbnb-like platform from scratch.
 - Implement clean, modular, and scalable backend services.
@@ -15,7 +15,7 @@ Welcome to the **Airbnb Clone Project**, a full-stack web development project in
 
 ---
 
-## 👨‍💻 Team Roles
+## Team Roles
 
 ### Backend Developer
 Responsible for implementing the application’s server-side logic, setting up API endpoints, and integrating with the database.
@@ -34,7 +34,7 @@ Develops test plans and writes automated and manual tests to ensure software qua
 
 ---
 
-## 🧰 Technology Stack
+## Technology Stack
 
 | Technology      | Purpose |
 |----------------|---------|
@@ -49,7 +49,7 @@ Develops test plans and writes automated and manual tests to ensure software qua
 
 ---
 
-## 🗃️ Database Design
+##  Database Design
 
 ### 🔑 Entities and Their Key Fields
 
@@ -88,7 +88,7 @@ Develops test plans and writes automated and manual tests to ensure software qua
    - `status`
    - `payment_date`
 
-### 🧩 Relationships
+### Relationships
 - A **User** can own multiple **Properties**.
 - A **Booking** is made by a **User** for a **Property**.
 - A **Review** belongs to both a **User** and a **Property**.
@@ -136,7 +136,7 @@ Admin users can monitor platform activity, manage users, and moderate content.
 
 ---
 
-## 🔁 CI/CD Pipeline
+## CI/CD Pipeline
 
 ### What is CI/CD?
 
@@ -156,7 +156,7 @@ Admin users can monitor platform activity, manage users, and moderate content.
 
 ---
 
-## 👥 Contributors
+## Contributors
 
 - Vision Chauke (Web Development, Backend Developer in training)
 
