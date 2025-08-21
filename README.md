@@ -1,168 +1,108 @@
-# Airbnb Clone Project
+# AirBnB Clone Project
 
-Welcome to the **Airbnb Clone Project**, a full-stack web development project inspired by the popular Airbnb platform. This project is developed as part of the ALX Software Engineering Program to reinforce essential skills in backend development, web frameworks, database management, security, and collaboration.
+## Overview
+The **AirBnB Clone Project** is a full-stack application that replicates core functionalities of the Airbnb platform. The goal is to design and build a user-friendly booking system where users can view property listings, explore detailed information, and complete a simple checkout process.  
 
----
+### Project Goals
+- Build a responsive and intuitive booking interface.  
+- Apply UI/UX principles to ensure seamless navigation and usability.  
+- Implement scalable backend services to manage users, listings, and bookings.  
+- Practice Agile methodologies and collaborative development.  
 
-## Project Goals
-
-- Build a functional Airbnb-like platform from scratch.
-- Implement clean, modular, and scalable backend services.
-- Use a relational database to handle dynamic data.
-- Design and deploy RESTful APIs.
-- Collaborate using Git and GitHub.
-- Learn and apply CI/CD and API security best practices.
-
----
-
-## Team Roles
-
-### Backend Developer
-Responsible for implementing the application’s server-side logic, setting up API endpoints, and integrating with the database.
-
-### Frontend Developer
-Creates responsive user interfaces and ensures a smooth user experience using HTML, CSS, and JavaScript frameworks.
-
-### Database Administrator (DBA)
-Designs, manages, and optimizes the database schema and queries to ensure fast and secure data operations.
-
-### DevOps Engineer
-Handles deployment, CI/CD pipeline automation, server configurations, and monitoring of application performance.
-
-### QA Engineer
-Develops test plans and writes automated and manual tests to ensure software quality and reliability.
+### Tech Stack
+- **Frontend:** HTML, CSS, JavaScript, React (planned)  
+- **Backend:** Python (Django/Flask)  
+- **Database:** MySQL/PostgreSQL  
+- **Design:** Figma, UI/UX best practices  
+- **Version Control:** Git & GitHub  
+- **Project Management:** Agile / Scrum  
 
 ---
 
-## Technology Stack
+## UI/UX Design Planning
 
-| Technology      | Purpose |
-|----------------|---------|
-| **Python**     | Main programming language for backend logic. |
-| **Flask**      | Lightweight web framework used to build RESTful APIs. |
-| **MySQL**      | Relational database used to store and manage application data. |
-| **HTML/CSS**   | Used to build and style frontend templates. |
-| **Jinja2**     | Templating engine for rendering dynamic content in HTML. |
-| **Git & GitHub** | Version control and collaboration. |
-| **Docker**     | Containerization for development, testing, and deployment. |
-| **GitHub Actions** | Automates testing, building, and deployment through CI/CD pipelines. |
+### Design Goals
+- Deliver a clean, modern, and intuitive interface.  
+- Prioritize usability and accessibility for all users.  
+- Ensure mobile responsiveness and cross-device compatibility.  
+- Create consistency in layout, typography, and color scheme.  
 
----
+### Key Features
+- Browse available property listings.  
+- View property details with images, pricing, and amenities.  
+- Complete a simple booking/checkout process.  
 
-##  Database Design
+### Primary Pages
 
-### 🔑 Entities and Their Key Fields
+| Page                  | Description                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| **Property Listing View** | Displays multiple property cards with essential information (image, price, location). |
+| **Listing Detailed View** | Provides in-depth details about a single property, including amenities, host info, and reviews. |
+| **Simple Checkout View**  | Allows users to confirm booking details, enter payment info, and finalize reservations. |
 
-1. **User**
-   - `id` (primary key)
-   - `username`
-   - `email`
-   - `password_hash`
-   - `role` (host or guest)
-
-2. **Property**
-   - `id`
-   - `user_id` (foreign key)
-   - `title`
-   - `description`
-   - `location`
-
-3. **Booking**
-   - `id`
-   - `user_id`
-   - `property_id`
-   - `start_date`
-   - `end_date`
-
-4. **Review**
-   - `id`
-   - `user_id`
-   - `property_id`
-   - `rating`
-   - `comment`
-
-5. **Payment**
-   - `id`
-   - `booking_id`
-   - `amount`
-   - `status`
-   - `payment_date`
-
-### Relationships
-- A **User** can own multiple **Properties**.
-- A **Booking** is made by a **User** for a **Property**.
-- A **Review** belongs to both a **User** and a **Property**.
-- A **Payment** is linked to a **Booking**.
+**Why User-Friendly Design Matters:**  
+A booking system must be intuitive and easy to navigate to avoid user frustration. A seamless design improves trust, reduces errors during checkout, and enhances overall user experience, leading to higher engagement and satisfaction.
 
 ---
 
-## 🔍 Feature Breakdown
+## More UI/UX Design Planning
 
-### 1. User Management
-Handles registration, login, authentication, and profile management for guests and hosts.
+### Design Properties from Figma
 
-### 2. Property Management
-Hosts can create, update, and delete property listings with details like images, descriptions, and availability.
+- **Color Styles**  
+  - Primary: #FF385C (Airbnb red/pink tone)  
+  - Secondary: #00A699 (teal/green tone)  
+  - Neutral: White, Black, Light Gray (#F7F7F7)  
 
-### 3. Booking System
-Users can search for properties and book available dates. The system checks for conflicts and stores bookings.
+- **Typography**  
+  - **Font Family:** Sans-serif (e.g., Inter / Roboto / Airbnb Cereal)  
+  - **Font Weights:** Regular (400), Medium (500), Bold (700)  
+  - **Font Sizes:**  
+    - Heading 1: 32px  
+    - Heading 2: 24px  
+    - Body: 16px  
+    - Small Text: 14px  
 
-### 4. Review System
-Guests can leave ratings and feedback after completing their stay, which helps maintain platform quality.
-
-### 5. Payment Integration
-Handles secure processing of payments for bookings, with payment status updates and receipt generation.
-
-### 6. Admin Dashboard (Optional)
-Admin users can monitor platform activity, manage users, and moderate content.
-
----
-
-## 🔐 API Security
-
-### Key Security Measures
-
-- **Authentication**: Verifies user identity using JWT or session-based login systems.
-- **Authorization**: Restricts access to specific endpoints based on user roles (guest/host/admin).
-- **Input Validation**: Sanitizes all incoming data to prevent injection attacks.
-- **Rate Limiting**: Protects endpoints from abuse by limiting the number of requests per user/IP.
-- **HTTPS & Secure Headers**: Ensures encrypted communication and adds headers to guard against XSS/CSRF.
-
-### Why Security Matters
-
-- **User Data Protection**: Safeguards sensitive user information like passwords and personal details.
-- **Booking & Payment Security**: Prevents unauthorized transactions or data breaches.
-- **Platform Integrity**: Ensures only legitimate users and activities occur on the system.
+**Importance of Identifying Design Properties:**  
+Defining design tokens (colors, fonts, typography) ensures **consistency** across the application. It speeds up development, strengthens brand identity, and creates a unified user experience.
 
 ---
 
-## CI/CD Pipeline
+## Project Roles and Responsibilities
 
-### What is CI/CD?
+- **Project Manager**  
+  Oversees the project timeline, scope, and resources. Ensures clear communication and delivery of milestones.  
 
-**CI/CD (Continuous Integration and Continuous Deployment)** automates the software delivery process. It ensures that changes to code are tested and deployed quickly, reliably, and safely.
+- **Product Owner**  
+  Defines product vision, prioritizes features, and manages the product backlog.  
 
-### Why It's Important
+- **Scrum Master**  
+  Facilitates Agile ceremonies, removes blockers, and ensures team productivity.  
 
-- Automates testing and deployment.
-- Reduces bugs by catching issues early.
-- Speeds up delivery and feedback loops.
+- **Frontend Developers**  
+  Implement the UI using HTML, CSS, JS/React. Ensure responsiveness and integration with APIs.  
 
-### Tools Used
+- **Backend Developers**  
+  Develop APIs, database models, and business logic for listings, users, and bookings.  
 
-- **GitHub Actions**: Automates testing and builds after every push.
-- **Docker**: Provides consistent development and production environments.
-- **Fabric**: Used for automated deployment scripts.
+- **Designers (UI/UX)**  
+  Create wireframes, mockups, and prototypes. Ensure usability and accessibility standards.  
+
+- **QA/Testers**  
+  Write test cases, perform functional and usability testing, and ensure bug-free releases.  
+
+- **DevOps Engineers**  
+  Manage CI/CD pipelines, deployments, and cloud infrastructure. Ensure application scalability and uptime.  
 
 ---
 
-## Contributors
+## UI Component Patterns
 
-- Vision Chauke (Web Development, Backend Developer in training)
+### Planned Components
+- **Navbar** – Contains site branding, navigation links, and user authentication actions.  
+- **Property Card** – Displays property image, title, price per night, and location.  
+- **Footer** – Contains links to About, Help, Terms & Privacy, and social media icons.  
 
 ---
 
-## 📜 License
-
-This project is licensed for educational and development purposes only. Developed as part of the ALX Software Engineering Program.
-
+🚀 Stay tuned as development progresses!
